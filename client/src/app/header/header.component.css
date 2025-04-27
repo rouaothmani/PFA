@@ -1,0 +1,84 @@
+/* Navigation styles */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-item.dropdown {
+    position: relative;
+  }
+  
+  /* Dropdown styles */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: -200%;
+    top: 30px;
+    background: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Make the Connecter link match other nav items */
+  .nav-link.dropdown-toggle {
+    color: white !important;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .caret {
+    margin-left: 5px;
+  }
+  
+  /* Show dropdown when active */
+  .show .dropdown-menu {
+    display: block;
+  }
+  
+  /* Form styles remain the same */
+  .dropdown-menu form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-menu input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu button {
+    padding: 8px;
+    background-color: #59c3df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .dropdown-menu button:hover {
+    background-color: #48a8c4;
+  }
+  
+  .dropdown-menu .links a {
+    display: inline-block;
+    color: #59c3df;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu .links a:hover {
+    text-decoration: underline;
+  }

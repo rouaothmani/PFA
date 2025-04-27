@@ -1,0 +1,219 @@
+/* Importation de la police Open Sans depuis Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+/* Styles pour le pied de page principal */
+.footer-distributed {
+	background: #005870; /* Couleur de fond */
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); /* Ombre légère */
+	box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur/hauteur */
+	width: 100%; /* Occuper toute la largeur */
+	text-align: left; /* Alignement du texte à gauche */
+	padding: 55px 50px; /* Espacement intérieur */
+	
+}
+
+/* Style pour la barre supérieure du footer */
+.footerTop {
+	background: #59c3df ; /* Couleur de fond */
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); /* Ombre légère */
+	box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur/hauteur */
+	width: 100%; /* Occuper toute la largeur */
+	text-align: left; /* Alignement du texte à gauche */
+	font: bold 16px sans-serif; /* Police en gras */
+	padding: 10px 50px; /* Espacement intérieur */
+	margin-top: auto; /* Coller au bas de la page */
+}
+
+/* Styles pour les liens de la barre supérieure du footer */
+.footerTop a {
+	background-color: #59c3df ; /* Couleur de fond */
+	color: #ffffff; /* Couleur du texte */
+	font-size: 25px; /* Taille du texte */
+	width: 38px; /* Largeur de l'élément */
+	height: 38px; /* Hauteur de l'élément */
+	border-radius: 50%; /* Bordures arrondies */
+	text-align: center; /* Centrer le texte */
+	line-height: 42px; /* Ajuster la hauteur du texte */
+	margin: 10px 15px; /* Espacement autour */
+	vertical-align: middle; /* Aligner verticalement */
+}
+
+/* Alignement des éléments du footer */
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+	display: inline-block; /* Affichage en ligne */
+	vertical-align: top; /* Aligner en haut */
+}
+
+/* Styles pour la partie centrale du footer */
+.footer-distributed .footer-center {
+	width: 50%; /* Occuper 50% de la largeur */
+}
+
+/* Icônes du footer */
+.footer-distributed .footer-center i {
+	background-color: #005870; /* Couleur de fond */
+	color: #ffffff; /* Couleur du texte */
+	font-size: 25px; /* Taille de l'icône */
+	width: 38px; /* Largeur */
+	height: 38px; /* Hauteur */
+	border-radius: 50%; /* Bordures arrondies */
+	text-align: center; /* Centrer le texte */
+	line-height: 42px; /* Ajuster la hauteur du texte */
+	margin: 10px 15px; /* Espacement autour */
+	vertical-align: middle; /* Alignement vertical */
+}
+
+/* Icône email */
+.footer-distributed .footer-center i.fa-envelope {
+	font-size: 17px; /* Taille de l'icône */
+	line-height: 38px; /* Hauteur de l'icône */
+}
+
+/* Texte à côté des icônes */
+.footer-distributed .footer-center p {
+	display: inline-block; /* Affichage en ligne */
+	color: #ffff; /* Couleur du texte */
+	font-weight: 400; /* Police normale */
+	vertical-align: middle; /* Alignement vertical */
+	margin: 0; /* Supprimer les marges */
+}
+
+/* Sous-titre dans le footer */
+.footer-distributed .footer-center p span {
+	display: block; /* Affichage en bloc */
+	font-weight: normal; /* Police normale */
+	font-size: 14px; /* Taille du texte */
+	line-height: 2; /* Espacement des lignes */
+}
+
+/* Liens dans le footer */
+.footer-distributed .footer-center p a {
+	color: white; /* Couleur du texte */
+	text-decoration: none; /* Supprimer le soulignement */
+}
+
+/* Partie droite du footer */
+.footer-distributed .footer-right {
+	width: 20%; /* Occuper 20% de la largeur */
+	color: #ffffff;
+}
+
+/* Liens dans le footer */
+.footer-distributed .footer-right .hi {
+	color: white; /* Couleur du texte */
+	text-decoration: none; /* Supprimer le soulignement */
+}
+
+/* Style des icônes sociales */
+.footer-distributed .footer-icons {
+	margin-top: 25px; /* Espacement au-dessus */
+}
+
+/* Icônes des réseaux sociaux */
+.footer-distributed .footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #22619f;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Responsiveness pour les petits écrans */
+@media (max-width: 880px) {
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right {
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i {
+		margin-left: 0;
+	}
+}
+.nav-link:hover {
+	color: #59c3df;
+  }
+  /* Footer layout styles */
+.footer-distributed {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+	background: #005870;
+	
+  }
+  
+  .footer-center {
+	flex: 1;
+	min-width: 250px;
+	padding: 20px;
+	color: white;
+  }
+  
+  .footer-right {
+	flex: 1;
+	min-width: 400px;
+	padding: 20px;
+  }
+  
+  .footer-columns-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+  }
+  
+  .footer-column {
+	flex: 1;
+	min-width: 150px;
+  }
+  
+  /* Remove the <br> tags spacing */
+  .footer-right br {
+	display: none;
+  }
+  
+  /* Navigation link styles */
+  .nav-link {
+	display: block;
+	margin: 8px 0;
+	color: white;
+	text-decoration: none;
+  }
+  
+  .nav-link:hover {
+	color: #59c3df;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	.footer-distributed {
+	  flex-direction: column;
+	}
+	
+	.footer-center, 
+	.footer-right {
+	  width: 100%;
+	  min-width: auto;
+	  text-align: center;
+	}
+	
+	.footer-columns-container {
+	  flex-direction: column;
+	  gap: 20px;
+	}
+  }

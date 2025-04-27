@@ -1,0 +1,66 @@
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(/img/11.png)" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h1>Inscription</h1>
+            <ul class="thm-breadcrumb list-unstyled" id="breadcrumbs">
+                <li>
+                    <a href=""><i class="fa fa-home"></i> • </a>
+                </li>
+                <li>
+                    <a href="/core/insc">Inscription </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="page-body">
+    <div class="container">
+        <div class="row">
+
+            <div class="containerPage ">
+                <div class="PageTitle">Inscrivez-vous</div>
+
+
+                <div>
+                    <div class="gl-title-left-blue-no-shadow"></div>
+
+                    <div class="w3-agileits-our-advantages-grids" style=" margin-left:10%;margin-right:10%">
+                        <form (ngSubmit)="checkCin()" #cinForm="ngForm">
+                            <div class="form-group">
+    
+                                <label class=" " for="cinInput">
+                                    Entrer votre CIN </label>
+                                <br>
+                                <input  id="cinInput" name="cinNumber" [(ngModel)]="cinNumber" type="number" maxlength="8" style="  background: rgba(28, 160, 222, 0.11); width: 100%;
+                    padding: 10px;
+                    outline: none;
+                    resize: none;
+                     
+                    background: rgba(28, 160, 222, 0.15);
+                    border: none;
+                    font-size: 14px;" class="form-control" required="">
+                            </div>
+
+
+
+                        </form>
+                        <br>
+
+
+                        <div class="form-group"> <button name="subins" class="btn btn-primary btn-block" style=" padding: 8px;
+                            background-color: #59c3df;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;" (click)="checkCin()">Valider</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

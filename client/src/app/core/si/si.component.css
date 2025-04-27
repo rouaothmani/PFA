@@ -1,0 +1,469 @@
+/* Importation de la police Open Sans depuis Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+ /* Style de l'en-tête avec image de fond */
+.page-header {
+    position: relative; /* Permet de positionner les éléments enfants en absolu */
+    height: 400px; /* Définit une hauteur de 400px pour l'en-tête */
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    align-items: center; /* Centre le contenu verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    color: white; /* Texte en blanc */
+    text-align: center; /* Centrage du texte */
+    background: url('/assets/img/6.png') no-repeat center/cover; /* Image de fond centrée et couverte */
+}
+
+/* Superposition sombre pour améliorer la lisibilité du texte */
+.page-header-bg {
+    position: absolute; /* Se place par-dessus l'image de fond */
+    top: 0; /* Commence depuis le haut */
+    left: 0; /* Commence depuis la gauche */
+    width: 100%; /* Couvre toute la largeur */
+    height: 100%; /* Couvre toute la hauteur */
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un effet sombre (50% d'opacité) */
+}
+
+/* Contenu textuel de l'en-tête */
+.page-header__inner {
+    position: relative; /* Assure que le texte reste au-dessus de l'overlay */
+    z-index: 2; /* Met le texte au premier plan */
+}
+
+/* Style de la navigation (breadcrumb) */
+.thm-breadcrumb {
+    padding: 0; /* Supprime les marges internes */
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Affichage en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Style des liens du fil d'Ariane */
+.thm-breadcrumb a {
+    color: white; /* Texte en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+}
+/* Appliquer la police et définir des styles de base pour tous les éléments */
+* {
+    font-family: 'Open Sans', sans-serif; /* Utilisation de la police Open Sans */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes par défaut */
+    box-sizing: border-box; /* Permet de garder les dimensions fixes même avec padding et border */
+}
+
+/* Style du conteneur principal */
+.containerPage {
+    background: rgb(232, 231, 231);; /* Fond blanc pour un design épuré */
+    padding: 20px; /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
+}
+
+/* Style du titre principal de la page */
+.PageTitle {
+    font-size: 28px; /* Définit la taille du texte */
+    font-weight: bold; /* Rend le texte en gras */
+    color: #222; /* Définit une couleur foncée pour le texte */
+    margin-bottom: 10px; /* Ajoute un espace en bas pour séparer du reste du contenu */
+    border-bottom: 3px solid #4a4a4a; /* Ajoute une ligne sous le titre pour le mettre en valeur */
+    padding-bottom: 5px; /* Ajoute un espace entre le texte et la ligne */
+}
+
+/* Style pour la section contenant la date et le nombre de vues */
+.page-body p {
+    font-size: 14px; /* Définit une taille de police plus petite */
+    color: #666; /* Définit une couleur grise pour le texte */
+    margin-bottom: 15px; /* Ajoute un espace sous le paragraphe */
+}
+
+/* Style des sous-titres (ex: "Directeur", "Secrétaire Général") */
+.gl-title-left-blue-no-shadow {
+    font-size: 18px; /* Définit une taille légèrement plus grande pour attirer l'attention */
+    font-weight: bold; /* Rend le texte en gras */
+    color: #2c3e50; /* Utilise une teinte de bleu foncé pour rester sobre et professionnel */
+    margin-top: 20px; /* Ajoute un espace au-dessus pour bien séparer les sections */
+}
+
+/* Style de la liste contenant les noms avec des icônes de validation */
+ul.tick {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 10px 0; /* Ajoute un léger espacement autour de la liste */
+}
+
+/* Style de chaque élément de la liste */
+ul.tick li {
+    font-size: 16px; /* Définit une taille lisible */
+    color: #333; /* Définit une couleur foncée pour le texte */
+    padding-left: 25px; /* Ajoute un espace à gauche pour insérer l'icône */
+    position: relative; /* Permet de positionner l'icône de validation */
+    margin-bottom: 10px; /* Ajoute un espace entre chaque élément */
+}
+
+/* Ajoute une icône "✔" verte avant chaque élément de la liste */
+ul.tick li::before {
+    content: '➤'; /* Symbole de validation */
+    position: absolute; /* Position absolue pour aligner l'icône correctement */
+    left: 0; /* Positionne l'icône à gauche */
+    top: 0; /* L'aligne verticalement avec le texte */
+    color: #005870; /* Définit une couleur verte pour l'icône */
+    font-size: 18px; /* Ajuste la taille de l'icône */
+    font-weight: bold; /* Rend l'icône plus visible */
+}
+
+/* Mise en évidence des noms */
+ul.tick li b, 
+ul.tick li strong {
+    color: #000; /* Définit une couleur noire pour plus de contraste */
+    font-weight: bold; /* Rend le texte en gras pour bien distinguer les noms */
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .PageTitle {
+        font-size: 24px; /* Réduit la taille du titre pour s'adapter aux écrans plus petits */
+    }
+    
+    .gl-title-left-blue-no-shadow {
+        font-size: 16px; /* Réduit légèrement la taille des sous-titres */
+    }
+    
+    ul.tick li {
+        font-size: 14px; /* Réduit la taille du texte pour une meilleure lisibilité */
+    }
+}
+
+.departments {
+    width: 250px; /* Set sidebar width */
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+  }
+
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+  }
+
+  .sidebar ul li a:hover {
+    color: #005870;
+  }
+
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    height: 50%;
+    background-color: #fff;
+  }
+
+  .main-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    height: 2px;
+    background-color: #eee;
+    margin: 10px 0 20px;
+  }
+
+  .profile-card {
+    background-color: #f1f2f4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #005870;
+    margin-bottom: 30px;
+  }
+
+  .profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -60px;
+    background-color: #ccc;
+  }
+
+  .profile-card h3 {
+    margin: 10px 0 5px;
+    color: #2f2f2f;
+  }
+
+  .profile-card p {
+    color: #444;
+  }
+
+  .Archive-des-examens{
+    background-color: #f1f2f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .Archive-des-examens h2 {
+    margin-bottom: 10px;
+  }
+  
+  .Enseignant{
+    background-color: #f1f2f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .Enseignant h2 {
+    margin-bottom: 10px;
+  }
+  
+  .underline {
+    width: 50px;
+    height: 5px;
+    background-color: #005870;
+    margin-bottom: 10px;
+  }
+
+  .blog-entry {
+    width: 100%;
+    float: left;
+    background: #fff;
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width: 768px) {
+    .blog-entry {
+        margin-bottom: 3em;
+    }
+}
+
+.blog-entry .blog-img {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.blog-entry .blog-img img {
+    position: relative;
+    max-width: 100%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.blog-entry .desc h3 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: auto;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Quicksand", Arial, sans-serif;
+}
+
+.blog-entry .desc h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.blog-entry .desc span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.4) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.blog-entry .desc span small i {
+    color: #999999;
+}
+
+.blog-entry .desc .lead {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.blog-entry:hover .blog-img img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.blog-entry h4 {
+    font-weight: 560;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.blog-entry h5 {
+    line-height: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: black
+}
+
+@media screen and (min-width: 992px) {
+    .card-img-top {
+        height: 196px;
+    }
+    .blog-entry h4 {
+        min-height: 52px;
+    }
+    .blog-entry h5 {
+        min-height: 30px;
+    }
+}
+
+.teachers-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.teacher-card {
+  width: calc(33.333% - 14px);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+   align-items: center;
+  justify-content: center;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.teacher-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.teacher-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  align-items: center; 
+  justify-content: center;
+}
+
+.page-btn {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+@media (max-width: 992px) {
+  .teacher-card {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .teacher-card {
+      width: 100%;
+  }
+  
+  .pagination-container {
+      flex-direction: column;
+      gap: 15px;
+      align-items: stretch;
+  }
+}

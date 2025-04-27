@@ -1,0 +1,150 @@
+<section class="page-header">
+  <div class="page-header-bg" alt="">
+  </div>
+  <div class="slider-wrapper" [class.expanded]="isExpanded">
+    <div class="slider-container">
+      <div class="slider" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        <div class="slide" *ngFor="let slide of slides" [style.background]="slide.background">
+          <h1>{{ slide.title }}</h1>
+        </div>
+      </div>
+  
+      <div class="slider-nav">
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+      </div>
+  
+      <div class="slider-dots">
+        <span *ngFor="let slide of slides; let i = index" 
+              [class.active]="i === currentIndex"
+              (click)="goToSlide(i)"></span>
+      </div>
+      
+  
+      <button class="close-btn" *ngIf="isExpanded" (click)="onClose()">&times;</button>
+      
+    </div>
+  </div>
+  
+</section>
+<section class="page-body">
+    <div class="container">
+        <div class="row">
+            <div class="containerPage ">
+                <div class="PageTitle">Nos Nouveautés</div>
+                <div>
+                    <div class="gl-title-left-blue-no-shadow"></div>
+
+                    <div class="filters">
+                        <a href="/core/actualites"><button>Actualités</button></a>
+                        <a href="/core/club"><button>Club</button></a>
+                        <a href="/core/activites"><button>Nos Activités</button> </a>                       
+                    </div>    
+                    <div class="actualites-container">  
+                    
+                        <div class="actualite">
+                            <div class="date">
+                                <span class="jour">19 </span>
+                                <span class="mois">Mars </span>
+                                <span class="heure">14:06</span>
+                            </div>
+                            <div class="contenu">
+                                <h2>WORKSHOP AGRICULTURE 4.0</h2>
+                                <p>WORKSHOP AGRICULTURE 4.0.</p>
+                                <a href="../assets/img/work.pdf"  data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor" style="color: #005870;">Plus de Détails</a>
+                            </div>
+                        </div>
+
+                        <div class="actualite">
+                            <div class="date">
+                                <span class="jour">10 </span>
+                                <span class="mois">Mars </span>
+                                <span class="heure">09:50</span>
+                            </div>
+                            <div class="contenu">
+                                <h2>CALENDRIER DES DS1 (SEMESTRE 2) A.U:2024-2025</h2>
+                                <p>Calendrier des DS1 (Semestre 2) pour l'année 2024-2025.</p>
+                                <a href="../assets/img/calendrier.pdf"  data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor" style="color: #005870;">Plus de Détails</a>
+                            </div>
+                        </div>
+
+                        <div class="actualite">
+                            <div class="date">
+                                <span class="jour">27 </span>
+                                <span class="mois">Février </span>
+                                <span class="heure">12:13</span>
+                            </div>
+                            <div class="contenu">
+                                <h2>بلاغ لكافة الطلبة</h2>
+                                <p>إعلان هام لجميع الطلبة.</p>
+                                <a href="../assets/img/a.pdf" data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor" style="color: #005870;">Plus de Détails</a>
+                            </div>
+                        </div>
+                       
+                        
+                            <div class="contenu">
+                                <a href="../core/actualites"  data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor" style="color: #005870;">⭠ Plus d'actualites ➝</a>
+                            </div>
+                </div>
+                </div>
+            </div>
+            <BR>
+            <div class="containerPage ">
+                <div class="PageTitle">Nos Espaces</div>
+                <BR>
+                <div>
+                    <div class="gl-title-left-blue-no-shadow"></div>
+                    <div class="nav-item">
+                        <a  href="/core/propos"   class="card">
+                            <h3>- A propos -</h3>
+                        </a>
+                
+                        <a href="/core/actualites" class="card">
+                            <h3>- Actualites -</h3>
+                        </a>
+                
+                        <a href="/core/formation"  class="card">
+                            <h3>- Formation -</h3>
+                        </a>
+                        
+                        <a href="/core/activites"  class="card">
+                            <h3>- Nos Activités -</h3>
+                        </a>
+                        
+                        <a href="/core/contact"   class="card">
+                            <h3>- Contact -</h3>
+                        </a>
+                        <a href="/core/dep" class="card">
+                            <h3>- Département-</h3>
+                        </a>
+                        <a href="/core/conseil" class="card">
+                            <h3>- Conseil scientifique -</h3>
+                        </a>
+                        <a href="/core/club"  class="card">
+                            <h3>- Club -</h3>
+                        </a>
+                    </div>
+                    <br><br>
+                    <div class="containerPage ">
+                        <div class="PageTitle">Notre Localisation</div>
+                        <div>
+                            <div class="gl-title-left-blue-no-shadow"></div>
+                            <BR>
+                    <div class="map-w3-agileits">
+                        <iframe  style="width: 100%; height: 500px;" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDjz5AOLsut-h6NKpDIUMq1RcYfEYuPi64&q=Isimed+tunisie"></iframe>
+                    </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+

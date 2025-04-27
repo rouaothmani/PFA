@@ -1,0 +1,129 @@
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(/img/6.png)" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h1>MPILC</h1>
+            <ul class="thm-breadcrumb list-unstyled" id="breadcrumbs">
+                <li>
+                    <a href=""><i class="fa fa-home"></i> • </a>
+                </li>
+                <li>
+                    <a href="/core/dep">Département </a>
+                </li>
+                <li>
+                    <a href="">• </a>
+                </li>
+                <li>
+                    <a href="/core/si">MPILC</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<body>
+
+    <div class="sidebar">
+        <div class="PageTitle">Département</div>
+        <div>
+            <div class="gl-title-left-blue-no-shadow"></div>
+            <p>
+            </p>
+            <ul>
+                <li><a href="../si">› SI</a></li>
+                <li><a href="../tic">› TIC</a></li>
+                <li><a href="../mpii">› MPII</a></li>
+                <li><a href="../mpilc">› MPILC</a></li>
+                <li><a href="../mreesc">› MREESC</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Ingénierie des Logiciels et Connaissances</h1>
+        <div class="divider"></div>
+
+        <div class="profile-card">
+            <img src="../assets/img/profile.png" alt="Profile">
+            <h3> Mr Ben Othmen Soufien</h3>
+            <p>E-mail : ...@gmail.com</p>
+        </div>
+
+        <div class="Archive-des-examens">
+            <h2>Archive des Examens</h2>
+            <div class="underline"></div>
+            <p>
+                <STRONG>
+                    <a download="DEVOIR" href="../assets/img/65.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a>
+                    <BR>
+
+                    <a download="DEVOIR" href="../assets/img/69.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a><BR>
+                    <a download="DEVOIR" href="../assets/img/70.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a><BR>
+                    <a download="DEVOIR" href="../assets/img/71.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a>
+                    <BR>
+                    <a download="DEVOIR" href="../assets/img/72.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a>
+                    <BR>
+
+                    <a download="DEVOIR" href="../assets/img/73.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a>
+                    <BR>
+                    <a download="DEVOIR" href="../assets/img/74.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a><BR>
+                    <a download="DEVOIR" href="../assets/img/75.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a>
+                    <BR>
+                    <a download="DEVOIR" href="../assets/img/67.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC1.PDF</a><BR>
+                    <a download="DEVOIR" href="../assets/img/66.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC2.PDF</a><BR>
+                    <a download="DEVOIR" href="../assets/img/68.pdf" style="color: black;" target="_blank"
+                        data-aos="zoom-in" data-aos-anchor="data-aos-anchor">⬇MPILC2.PDF</a>
+                </STRONG>
+            </p>
+
+        </div>
+        <br>
+        <div class="Enseignant">
+            <h2>Enseignant</h2>
+            <div class="underline"></div>
+
+            <div class="teachers-container">
+                <div class="teacher-card" *ngFor="let teacher of paginatedTeachers">
+                    <img [src]="teacher.image" [alt]="teacher.name" class="card-image">
+                    <div class="card-body">
+                        <div class="teacher-name">{{teacher.name}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" (click)="changePage('first')" [disabled]="currentPage === 1">
+                    &lt;&lt;
+                </button>
+                <button class="page-btn" (click)="changePage('prev')" [disabled]="currentPage === 1">
+                    &lt;
+                </button>
+
+                <button *ngFor="let page of [].constructor(totalPages); let i = index" class="page-btn"
+                    [class.active]="currentPage === i+1" (click)="changePage(i+1)">
+                    {{i+1}}
+                </button>
+
+                <button class="page-btn" (click)="changePage('next')" [disabled]="currentPage === totalPages">
+                    &gt;
+                </button>
+                <button class="page-btn" (click)="changePage('last')" [disabled]="currentPage === totalPages">
+                    &gt;&gt;
+                </button>
+            </div>
+
+            <div>{{paginationInfo}}</div>
+        </div>
+    </div>
+</body>
