@@ -11,14 +11,22 @@ export class UserService {
     private userRepository: Repository<User>,
   ) {}
 
-  async createUser(userData: Partial<User>): Promise<User> {
+  async create(userData: {
+    cin: number | string;
+    password: string;
+    role: string;
+  }): Promise<User> {
     const saltRounds = 10;
-    const hashedPassword = await bcrypt.hash(userData.password, saltRounds);
-    const user = this.userRepository.create({
-        cin : userData.cin,
-        password: hashedPassword,
-        role: userData.role,
-    });
-    return this.userRepository.save(user);
-  }
+    const { password, cin, role } = userData;
+
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    const user = new User();
+      user.cin = typeof cin === 'string' ? parseInt(cin, 10) : cin;
+
+    user.password = hashedPassword;
+    user.role = role;
+
+    return await this.userRepository.save(user);
+}
 }

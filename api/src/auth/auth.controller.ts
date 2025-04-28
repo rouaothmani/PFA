@@ -18,7 +18,7 @@ export class LoginCredentialsDto {
 }
 export class CreateUserDto {
   @IsNotEmpty()
-  @Matches(/^[0-9]+$/, {
+  @Matches(/^[0-9]{9}$/, {
     message: 'cin must contain only digits',
   })
   @Length(9, 9)
@@ -28,7 +28,7 @@ export class CreateUserDto {
   @IsString()
   password: string;
   @IsNotEmpty()
-  @IsString()
+
   role:string;
 }
 
