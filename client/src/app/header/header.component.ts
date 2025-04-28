@@ -9,8 +9,8 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  cin: number = 12456778;
-  password!: string;
+  cin: number = 24681357;
+  password!: 'userPass1234';
 
   constructor(private headerService: HeaderService, private toastrService: ToastrService, private router: Router) {}
 
