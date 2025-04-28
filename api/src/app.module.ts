@@ -7,11 +7,15 @@ import { AuthModule } from './auth/auth.module';
 @Module({
    imports: [
       TypeOrmModule.forRoot({         
-        type: 'sqlite',
-        database: 'db.sqlite',
+        type: 'postgres',
+        host: 'localhost',
+        port: 5432,
+        username: 'postgres',
+        password: 'mysecretpassword',
+        database: 'pfa',
         autoLoadEntities: true,
-        entities: [],
         synchronize: true,
+        
       }),
       AuthModule
     ],
