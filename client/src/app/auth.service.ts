@@ -12,7 +12,7 @@ export class AuthService {
   private refreshTokenKey = "refreshToken";
   private userRoleKey = "userRole";
   private expirationTimeKey = "tokenExpiration";
-  private apiUrl = "http://localhost:3000/auth"; // Replace with your API endpoint
+  private apiUrl = "http://localhost:3000/api/auth"; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {
     this.loadAuthState();
@@ -51,6 +51,19 @@ export class AuthService {
       })
     );
   }
+  loginWithToken(token: string): void {
+    console.log('Logging in with token:', token);
+    localStorage.setItem(this.tokenKey, token);
+    this.loggedIn.next(true);
+  }
+
+  logout(): void {
+    console.log('Logging out');
+    localStorage.removeItem(this.tokenKey);
+    this.loggedIn.next(false);
+  }
+
+
 
   refreshToken(): Observable<any> {
     const refreshToken = localStorage.getItem(this.refreshTokenKey);
@@ -86,13 +99,6 @@ export class AuthService {
     this.loggedIn.next(true); // Update login state
   }
 
-  logout() {
-    localStorage.removeItem(this.tokenKey);
-    localStorage.removeItem(this.refreshTokenKey);
-    localStorage.removeItem(this.userRoleKey);
-    localStorage.removeItem(this.expirationTimeKey);
-    this.loggedIn.next(false); // Update login state
-  }
 
   getToken(): string | null {
     return localStorage.getItem(this.tokenKey);

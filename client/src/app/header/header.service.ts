@@ -1,14 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { environment } from '../envirments/environment';
 import { AuthService } from '../auth.service';
-
-interface LoginResponse {
-  success: boolean;
-  token: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +11,7 @@ interface LoginResponse {
 export class HeaderService {
 
   constructor(private http: HttpClient, private authService: AuthService) { }
-
-  login(cin: number, password: string): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${environment.ApiTarget}/auth/login`, {cin, password}).pipe(
-      tap(response => { if (response.success) this.authService.login(response.token); })
-    );
+  login(cin: number, password: string): Observable<any> {
+    return this.http.post<any>(`${environment.ApiTarget}/auth/login`, { cin, password }).pipe(map(response => this.authService.login(response.token)));
   }
 }
