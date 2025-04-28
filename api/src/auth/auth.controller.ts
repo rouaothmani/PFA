@@ -35,11 +35,16 @@ export class CreateUserDto {
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService, private userService : UserService) {}
+  
   @UsePipes(new ValidationPipe())
+
+
   @Post('login')
   async login(@Body() credentials: LoginCredentialsDto) {
     return await this.authService.login(credentials);
   }
+
+
   @Post('create')
   async create(@Body() newUser:CreateUserDto) {
     return await this.userService.create(newUser)

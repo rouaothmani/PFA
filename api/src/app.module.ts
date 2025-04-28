@@ -10,8 +10,8 @@ import { AuthModule } from './auth/auth.module';
         host: 'localhost',
         port: 5432,
         username: 'postgres',
-        password: 'mysecretpassword',
-        database: 'pfa',
+        password: 'postgresql',
+        database: 'agil',
         autoLoadEntities: true,
         synchronize: true,
         
