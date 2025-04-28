@@ -8,7 +8,7 @@ import { HeaderService } from './header.service';
 })
 
 export class HeaderComponent {
-  cin: string = '';
+  cin: number =12456778;
   password!: string;
 
   constructor(private headerService: HeaderService) { }

@@ -10,17 +10,17 @@ async function createUsers() {
 
   const users = [
       {
-            cin: '1234',
+      cin: '55555555',
       password: hashedPassword1,
       role: 'admin',
     },
     {
-      cin: '4321',
+      cin: '43214333',
       password: hashedPassword2,
       role: 'user',
     },
     {
-            cin: '9876',
+            cin: '98761111',
             password: hashedPassword3,
             role: 'user',
     },
