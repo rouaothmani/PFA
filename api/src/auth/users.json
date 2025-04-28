@@ -1,15 +1,17 @@
 ts
 const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const fs = require('fs');
 
 async function createUsers() {
   const saltRounds = 10;
   const hashedPassword1 = await bcrypt.hash('pass', saltRounds);
   const hashedPassword2 = await bcrypt.hash('pass', saltRounds);
+  const hashedPassword3 = await bcrypt.hash('test', saltRounds);
 
   const users = [
     {
-      cin: '1234',
+            cin: '1234',
       password: hashedPassword1,
       role: 'admin',
     },
@@ -17,6 +19,11 @@ async function createUsers() {
       cin: '4321',
       password: hashedPassword2,
       role: 'user',
+    },
+    {
+            cin: '9876',
+            password: hashedPassword3,
+            role: 'user',
     },
   ];
 
