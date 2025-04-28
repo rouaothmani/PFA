@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 import { CoreRoutingModule } from './core-routing.module';
 import { ProposComponent } from './propos/propos.component';
@@ -53,6 +55,10 @@ import { HttpClientModule } from '@angular/common/http';
     CoreRoutingModule,
     FormsModule,
     HttpClientModule,
+    ToastModule
+  ],
+  providers: [
+    MessageService
   ],
   exports:[
     ProposComponent,
