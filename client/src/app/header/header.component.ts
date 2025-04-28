@@ -13,23 +13,15 @@ export class HeaderComponent {
 
   constructor(private headerService: HeaderService, private toastrService: ToastrService) {}
 
-  showToast(message: string, type: 'success' | 'danger') {
-    if (type === 'success') {
-      this.toastrService.success(message);
-    } else {
-      this.toastrService.error(message);
-    }
-  }
-
   submit() {
     this.headerService.login(this.cin, this.password).subscribe(
       (response) => {
         console.log('Login successful:', response);
-        this._showToast('Login Successful!', true);
+        this.toastrService.success('Login Successful!');
       },
       (error) => {
         console.error('Login failed:', error);
-        this._showToast('Login Failed!', false);
+        this.toastrService.error('Login Failed!');
       }
     );
   }
