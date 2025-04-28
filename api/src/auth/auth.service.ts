@@ -14,11 +14,11 @@ export class AuthService {
   ) {}
 
   async login(credentials: any) {
+    console.log('credentials in service :>> ', credentials);
     const { cin, password } = credentials;
 
     const user = await this.userRepository.findOneBy({ cin });
-    
-
+    console.log('user :>> ', user);
     if (!user) {
       throw new UnauthorizedException();
     }

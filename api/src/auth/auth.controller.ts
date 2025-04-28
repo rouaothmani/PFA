@@ -11,6 +11,7 @@ export class AuthController {
   @UsePipes(new ValidationPipe())
   @Post('login')
   async login(@Body() credentials: LoginDto) {
+    console.log('credentials in crontroller:>> ', credentials);
     return await this.authService.login(credentials);
   }
 }
