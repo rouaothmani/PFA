@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
@@ -13,7 +13,11 @@ export class UserService {
   ) { }
 
   async findOne(cin: number): Promise<User | null> {
-    return await this.userRepository.findOneBy({ cin });
+    const user = await this.userRepository.findOneBy({ cin });
+    if(!user){
+      throw new NotFoundException("user not found")
+    }
+    return user;
   }
 
   async findUserByRefreshToken(refreshToken: string): Promise<User> {
@@ -33,5 +37,32 @@ export class UserService {
     user.cin = userDto.cin;
     user.password = await bcrypt.hash(userDto.password, 10);
     return this.userRepository.save(user);
+  }
+
+  async findAll(): Promise<User[]> {
+    return await this.userRepository.find();
+  }
+
+  async delete(cin: number) {
+    const user = await this.findOne(cin)
+    if(!user){
+      throw new NotFoundException("user not found")
+    }
+    return await this.userRepository.delete(user);
+  }
+
+  async update(cin: number, userDto: any): Promise<User> {
+    const user = await this.findOne(cin);
+    if(!user){
+      throw new NotFoundException("user not found");
+    }
+    if(userDto.password){
+      user.password = await this.hashPassword(userDto.password);
+    }
+    return this.userRepository.save(user);
+  }
+
+  async hashPassword(password : string){
+    return await bcrypt.hash(password,10)
   }
 }
