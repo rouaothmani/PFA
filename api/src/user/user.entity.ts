@@ -1,15 +1,13 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, PrimaryColumn, Unique } from 'typeorm';
 
 @Entity()
+@Unique(['cin'])
 export class User {
   @PrimaryColumn()
-  cin: number
+  cin: number;
 
   @Column()
   password: string;
-
-  @Column()
-  role: string;
 
   @Column({ nullable: true })
   refreshToken: string;
