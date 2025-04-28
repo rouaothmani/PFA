@@ -1,5 +1,5 @@
 export class User {
-  cin: string;
+  cin: number;
   password: string;
   role: string;
 }

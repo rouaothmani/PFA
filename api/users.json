@@ -1,17 +1,17 @@
 [
   {
-    "cin": "1234",
-    "password": "$2b$10$4RBAqFsmVJdPq5awaHBs9OJF5QDw5xDPtqugPe6aGgQk0lUt7EAH2",
+    "cin": "12345678",
+    "password": "$2b$10$b/b.1JcdXYRaK8vVKNdhoeVVyx22MjvJ3v97htHnB/ALDFTi2fLCq",
     "role": "admin"
   },
   {
-    "cin": "4321",
-    "password": "$2b$10$TdQ80gimfBUPExX2gWd38eIqworg7JP154gJCc43XhGhrDC4s712y",
+    "cin": "43216666",
+    "password": "$2b$10$UpAufRRcHWU/X/Y.D5B6EOzioLfF058BHmLuX4j/LYHiMb9EsCFuO",
     "role": "user"
   },
   {
-    "cin": "9876",
-    "password": "$2b$10$Y23UCXbR5xcRUgQINpPyJ.8NJX6fpqiCL4.R/yyENnk1DmW3aiCgO",
+    "cin": "98762222",
+    "password": "$2b$10$gtKi3Q5OiAZ2a5TGIyQd4eOuH8Ou5njeETPzNM3bUgYjK0XGnB1q.",
     "role": "user"
   }
 ]

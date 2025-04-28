@@ -1,10 +1,14 @@
-import { Controller, Post, Body, UsePipes, ValidationPipe, Get } from '@nestjs/common';
+import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString, Length, Matches } from 'class-validator';
 
 export class LoginCredentialsDto {
   @IsNotEmpty()
-  @IsNumber()
+  @IsString()
+  @Length(9, 9)
+  @Matches(/^[0-9]+$/, {
+    message: 'cin must contain only digits',
+  })
   cin: number;
 
   @IsNotEmpty()
@@ -15,6 +19,7 @@ export class LoginCredentialsDto {
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
+  @UsePipes(new ValidationPipe())
 
   @Post('login')
   async login(@Body() credentials: LoginCredentialsDto) {

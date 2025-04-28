@@ -14,7 +14,7 @@ export class HeaderComponent {
   constructor(private headerService: HeaderService) { }
 
   submit() {
-    this.headerService.login(Number(this.cin), this.password).subscribe(
+    this.headerService.login(this.cin, this.password).subscribe(
       (response) => {
         console.log('Login successful:', response);
       },
@@ -24,3 +24,4 @@ export class HeaderComponent {
     );
   }
 }
+
