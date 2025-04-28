@@ -8,10 +8,10 @@ async function bootstrap() {
   app.enableCors();
 
   const config = new DocumentBuilder()
-    .setTitle('ISIM API')
-    .setDescription('The ISIM API description')
+    .setTitle('Agil API')
+    .setDescription('The agil API description')
     .setVersion('1.0')
-    .addTag('isim')
+    .addTag('agil')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
