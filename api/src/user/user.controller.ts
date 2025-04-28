@@ -30,12 +30,15 @@ export class UserController {
   async create(@Body() createUserDto: CreateUserDto) {
     return await this.userService.create(createUserDto);
   }
+
   @Get()
   @ApiOperation({ summary: 'get all users' })
   @ApiResponse({ status: 200, description: 'Users retrieved successfully' })
   async findAll() {
     return this.userService.findAll();
   }
+
+
   @Get(':cin')
   @ApiOperation({ summary: 'find one user by cin' })
   @ApiResponse({ status: 200, description: 'user retrieved successfully' })
@@ -43,12 +46,15 @@ export class UserController {
     const user = await this.userService.findOne(cin);
     return user;
   }
+
+
   @Delete(':cin')
   @ApiOperation({ summary: 'delete a user by cin' })
   @ApiResponse({ status: 200, description: 'user deleted successfully' })
   async delete(@Param('cin') cin: number) {
     return await this.userService.delete(cin);
   }
+  
   @Put(':cin')
   async update(@Param('cin') cin: number, @Body() updateUserDto: UpdateUserDto) {
     return await this.userService.update(cin, updateUserDto);
