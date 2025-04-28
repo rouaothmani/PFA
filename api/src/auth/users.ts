@@ -1,8 +1,7 @@
-ts
-const bcrypt = require('bcrypt');
-const bcrypt = require('bcrypt');
-const fs = require('fs');
-
+import * as bcrypt from 'bcrypt';
+import * as fs from 'fs';
+  
+  
 async function createUsers() {
   const saltRounds = 10;
   const hashedPassword1 = await bcrypt.hash('pass', saltRounds);
@@ -10,7 +9,7 @@ async function createUsers() {
   const hashedPassword3 = await bcrypt.hash('test', saltRounds);
 
   const users = [
-    {
+      {
             cin: '1234',
       password: hashedPassword1,
       role: 'admin',
