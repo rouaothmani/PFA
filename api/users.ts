@@ -1,32 +1,40 @@
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './src/app.module';
+import { UserService } from './src/auth/auth.service';
 import * as bcrypt from 'bcrypt';
-import * as fs from 'fs';
-  
-  
-async function createUsers() {
+
+async function bootstrap() {
+  const app = await NestFactory.createApplicationContext(AppModule);
+  const userService = app.get(UserService);
+
   const saltRounds = 10;
-  const hashedPassword1 = await bcrypt.hash('pass', saltRounds);
-  const hashedPassword2 = await bcrypt.hash('pass', saltRounds);
-  const hashedPassword3 = await bcrypt.hash('test', saltRounds);
+  const passwordAdmin = await bcrypt.hash('pass', saltRounds);
+  const passwordUser1 = await bcrypt.hash('pass', saltRounds);
+  const passwordUser2 = await bcrypt.hash('test', saltRounds);
 
-  const users = [
-      {
-            cin: '1234',
-      password: hashedPassword1,
-      role: 'admin',
-    },
-    {
-      cin: '4321',
-      password: hashedPassword2,
-      role: 'user',
-    },
-    {
-            cin: '9876',
-            password: hashedPassword3,
-            role: 'user',
-    },
-  ];
+  const userAdmin = {
+    cin: '123456789',
+    password: passwordAdmin,
+    role: 'admin',
+  };
 
-  fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
+  const user1 = {
+    cin: '987654321',
+    password: passwordUser1,
+    role: 'user',
+  };
+
+  const user2 = {
+    cin: '111111111',
+    password: passwordUser2,
+    role: 'user',
+  };
+
+  await userService.create(userAdmin);
+  await userService.create(user1);
+  await userService.create(user2);
+  console.log('users created succesfully');
+  await app.close();
 }
 
-createUsers();
+bootstrap();
