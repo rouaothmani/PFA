@@ -40,29 +40,29 @@
                       <div class="col-md-12 ">
   
                         <hr>
-                        <form class="form" role="form"  #loginForm="ngForm" id="login-nav">
+                        <form class="form" role="form"  #loginForm="ngForm" id="login-nav" (ngSubmit)="submit()">
                           <div class="form-group">
                             <label class="sr-only" for="cinInput">Identifiant</label>
-                            <input type="number" class="form-control" id="cinNumber" 
+                            <input type="number" class="form-control" id="cinNumber" [(ngModel)]="cin"
                                    name="cinNumber" 
-                                   min="0" max="99999999"
+                                   minlength="8" maxlength="8"
                                    style="color: black; background-color: paleturquoise" 
-                                   placeholder="Identifiant" required>
+                                   placeholder="Identifiant" >
                           </div>
                           
                           <div class="form-group">
-                            <label class="sr-only" for="pass">Mot de passe</label>
-                            <input type="password" class="form-control" 
+                            <label class="sr-only" for="password">Mot de passe</label>
+                            <input type="password" class="form-control" [(ngModel)]="password"
                                    name="passe" 
                                    style="color: black; background-color: paleturquoise" 
-                                   id="pass" placeholder="Mot de passe" required>
+                                   id="pass" placeholder="Mot de passe">
                           </div>
                           
                           <hr>
                           
                           <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" 
-                            [disabled]="!loginForm.valid">
+                            >
                               Se Connecter
                             </button>
                           </div>
