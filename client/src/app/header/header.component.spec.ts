@@ -9,6 +9,7 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent]
+      
     });
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
