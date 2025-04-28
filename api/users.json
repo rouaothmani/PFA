@@ -1,0 +1,17 @@
+[
+  {
+    "cin": "1234",
+    "password": "$2b$10$Cmmob.dAE0F.o/Ad85zuhOLUIboozIFjc7FE0f6h011dDkGbEEgie",
+    "role": "admin"
+  },
+  {
+    "cin": "4321",
+    "password": "$2b$10$FcFg0UR18BbzHEoWIruHoebXVWNWg17GAUZoRLuO79ME11ZnPZTh2",
+    "role": "user"
+  },
+  {
+    "cin": "9876",
+    "password": "$2b$10$epVJ.AAlTmsCzlppd365wON50uQw4bSv8eRwp09OTOOKMjgByYFHi",
+    "role": "user"
+  }
+]
