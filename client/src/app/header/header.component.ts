@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderService } from './header.service';
-import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -12,27 +11,32 @@ export class HeaderComponent {
   cin: number =12456778;
   password!: string;
 
-  constructor(private headerService: HeaderService,private messageService: MessageService) { }
+  constructor(private headerService: HeaderService) {}
+
+  private _showToast(message: string, isSuccess: boolean) {
+    const toastLiveExample = document.getElementById('myToast') as HTMLElement;
+    const toastBody = document.querySelector('#myToast .toast-body') as HTMLElement;
+    if (toastLiveExample && toastBody) {
+      toastBody.textContent = message;
+      toastLiveExample.classList.remove(isSuccess ? 'bg-danger' : 'bg-success');
+      toastLiveExample.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
+      const toast = new (window as any).bootstrap.Toast(toastLiveExample);
+      toast.show();
+    }
+  }
 
   submit() {
     this.headerService.login(this.cin, this.password).subscribe(
       (response) => {
         console.log('Login successful:', response);
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Success',
-          detail: 'Login Successful!'
-        });
+        this._showToast('Login Successful!', true);
       },
       (error) => {
         console.error('Login failed:', error);
-        this.messageService.add({
-          severity: 'error',
-          summary: 'Error',
-          detail: 'Login Failed!'
-        });
+        this._showToast('Login Failed!', false);
       }
     );
   }
 }
+
 
