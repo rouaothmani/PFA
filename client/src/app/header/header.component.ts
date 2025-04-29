@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { HeaderService } from './header.service';
+
+interface user {
+  name: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -18,8 +22,12 @@ export class HeaderComponent {
     this.headerService.login(this.cin, this.password).subscribe(
       (response) => {
         console.log('Login successful:', response);
-        this.toastrService.success('Login Successful!');        
+        this.toastrService.success('Login Successful!');
         this.router.navigate(['/profile']);
+        this.isLoggedIn = true;
+        this.headerService.getUserByCin(this.cin).subscribe((response: user) => {
+          this.userName = response.name;
+        })
 
       },
       (error) => {
