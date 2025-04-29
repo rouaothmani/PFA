@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InscService {
-  private Url = 'http://localhost:3000/insc';
+  private Url = 'http://localhost:3000/auth/login';
 
   constructor(private http: HttpClient) { }
 

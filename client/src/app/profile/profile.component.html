@@ -1,43 +1,109 @@
-<div class="profile-container">
-    <div class="sidebar">
-      <div class="user-info">
-        <div class="user-name">Bienvenue</div>
-        <div class="welcome-message">Bienvenue {{user?.name}}</div>
-      </div>  
-      <ul class="menu">
-        <li><a href="#">Actualités</a></li>
-        <li><a href="#">Paramètres Compte</a></li>
-        <li><a href="#">Mes Notes</a></li>
-        <li><a href="#">Demande Attestation de Présence</a></li>
-        <li><a href="#">Archive des DS et EXAMENS</a></li>
-        <li class="logout"><a href="#">Déconnexion</a></li>
+<section class="page-header">
+  <div class="page-header-bg" style="background-image: url(/img/11.png)" alt="">
+  </div>
+  <div class="container">
+    <div class="page-header__inner">
+      <h1>Votre Compte</h1>
+      <ul class="thm-breadcrumb list-unstyled" id="breadcrumbs">
+        <li>
+          <a href=""><i class="fa fa-home"></i> • </a>
+        </li>
+        <li>
+          <a href="/profile">Se Connecter </a>
+        </li>
       </ul>
     </div>
-    <div class="main-content">
-      <div class="news-section">
-        <h2 class="news-heading">ACTUALITÉ POUR ETUDIANTS</h2>
-        <div class="news-list" *ngFor="let new of news">
-          <div class="news-box">
-            <div class="news-date">
-              <span class="day">{{new.date}}</span>
-              <span class="month">{{new.month}}</span>
-            </div>
-            <div class="news-details">
-              <div class="news-time">{{new.time}}</div>
-              <div class="news-title">{{new.title}}</div>
-              <a href="#" class="news-link">Plus de Détails <span class="new-tag" *ngIf="new.isNew">NEW</span></a>
-            </div>           
-            <div class="news-date">
-              <span class="day">23</span>
-              <span class="month">août</span>
-            </div>
-            <div class="news-details">
-              <div class="news-time">11:02</div>
-              <div class="news-title">Page De Garde PFE MPILC A.U 2024-2025</div>
-              <a href="#" class="news-link">Plus de Détails <span class="new-tag">NEW</span></a>
-            </div>
-          </div>
+  </div>
+</section>
+<div class="profile-container">
+  <div class="sidebar">
+    <div class="user-info">
+      <div class="user-name">Bienvenue</div>
+    </div>
+    <ul class="menu">
+      <li><a href="/note">Mes Notes</a></li>
+      <li><a href="/demande">Demande Attestation de Présence</a></li>
+    </ul>
+  </div>
+
+ <!-- <div class="account-settings">
+    <div class="profile-pic"></div>
+    <h1>PARAMETRES DU COMPTE</h1>
+  
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom</label>
+          <input type="text" value="">
+        </div>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" value="">
+        </div>
       </div>
+  
+      <div class="form-row">
+        <div class="form-group">
+          <label>Tel</label>
+          <input type="text">
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="text" value="">
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Classe</label>
+        <input type="text" value="">
+      </div>
+  
+      <button type="submit" class="btn-submit">Valider</button>
+    </form>
+  </div>
+
+  <div class="form-group" id="notes">
+    <label class="notes" for="exampleInputEmail2"  >
+      Semestre </label>
+    <select style="  background: rgba(28, 160, 222, 0.11); width: 100%;
+    padding: 10px;
+    outline: none;
+    resize: none;
+     
+    background: rgba(28, 160, 222, 0.15);
+    border: none;
+							 font-size: 14px;" class="form-control" name="semetd" id="semetd" required="">
+      <option>Selectionnez Semestre </option>
+      <option value="1">Semestre 1 </option>
+      <option value="2">Semestre 2 </option>
+    </select>
+  </div>
+  <div class="main-content" id="2">
+    <div class="news-section">
+      <h2 class="news-heading">ACTUALITÉ POUR ETUDIANTS</h2>
+      <div class="news-list" *ngFor="let new of news">
+        <div class="news-box">
+          <div class="news-date">
+            <span class="day">{{new.date}}</span>
+            <span class="month">{{new.month}}</span>
+          </div>
+          <div class="news-details">
+            <div class="news-time">{{new.time}}</div>
+            <div class="news-title">{{new.title}}</div>
+            <a href="#" class="news-link">Plus de Détails <span class="new-tag" *ngIf="new.isNew">NEW</span></a>
+          </div>
+          <div class="news-date">
+            <span class="day">23</span>
+            <span class="month">août</span>
+          </div>
+          <div class="news-details">
+            <div class="news-time">11:02</div>
+            <div class="news-title">Page De Garde PFE MPILC A.U 2024-2025</div>
+            <a href="#" class="news-link">Plus de Détails <span class="new-tag">NEW</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+-->
+</div>

@@ -1,0 +1,51 @@
+<section class="page-header">
+  <div class="page-header-bg" style="background-image: url(/img/11.png)" alt="">
+  </div>
+  <div class="container">
+    <div class="page-header__inner">
+      <h1>Votre Compte</h1>
+      <ul class="thm-breadcrumb list-unstyled" id="breadcrumbs">
+        <li>
+          <a href=""><i class="fa fa-home"></i> • </a>
+        </li>
+        <li>
+          <a href="/profile">Se Connecter </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="profile-container">
+  <div class="sidebar">
+    <div class="user-info">
+      <div class="user-name">Bienvenue</div>
+    </div>
+    <ul class="menu">
+      <li><a href="/note">Mes Notes</a></li>
+      <li><a href="#">Demande Attestation de Présence</a></li>
+    </ul>
+  </div>
+
+  <div class="attestation-form">
+    <h1>DEMANDE ATTESTATION DE PRÉSENCE</h1>
+
+    <div class="language-selection">
+      <p>Francais</p>
+    </div>
+
+    <div class="separator"></div>
+
+    <form (ngSubmit)="envoyerEmail()" #contactForm="ngForm">
+      <div class="language-option">
+        <label>Raison</label>
+        <input type="text" [(ngModel)]="raison" name="raison" required>
+
+      </div>
+
+      <div class="separator"></div>
+
+      <button type="submit" class="btn-submit">Valider</button>
+    </form>
+    <p *ngIf="confirmation" style="color: green;">{{ confirmation }}</p>
+  </div>
+</div>

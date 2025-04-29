@@ -22,7 +22,6 @@ import { For4Component } from './for4/for4.component';
 import { MpiiComponent } from './mpii/mpii.component';
 import { MpilcComponent } from './mpilc/mpilc.component';
 import { MreescComponent } from './mreesc/mreesc.component';
-import { Insc2Component } from './insc2/insc2.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -46,7 +45,6 @@ import { HttpClientModule } from '@angular/common/http';
     MpiiComponent,
     MpilcComponent,
     MreescComponent,
-    Insc2Component
   ],
   imports: [
     CommonModule,
@@ -76,7 +74,6 @@ import { HttpClientModule } from '@angular/common/http';
     MpiiComponent,
     MpilcComponent,
     MreescComponent,
-    Insc2Component
   ]
 })
 export class CoreModule { }

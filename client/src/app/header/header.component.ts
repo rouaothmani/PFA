@@ -50,4 +50,12 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
+  closeDropdown() {
+    // Get the dropdown menu and remove 'show' class to close it
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+      dropdownMenu.classList.remove('show');
+    }
+  }
+  
 }

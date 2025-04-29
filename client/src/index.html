@@ -47,6 +47,20 @@
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+    function showSubjects() {
+  var selected = document.getElementById('semetd').value;
+
+  // Hide both semester sections first
+  document.getElementById('semester1').style.display = 'none';
+  document.getElementById('semester2').style.display = 'none';
+
+  // Show the selected semester
+  if (selected === '1') {
+    document.getElementById('semester1').style.display = 'block';
+  } else if (selected === '2') {
+    document.getElementById('semester2').style.display = 'block';
+  }
+}
   </script>
   
 </body>

@@ -37,15 +37,16 @@
                 <br>
 
                 <section class="contact-form">
-                    <form onsubmit="return envoyerMessage(event)">
-                        <input type="text" id="nom" placeholder="Votre nom" required>
-                        <input type="email" id="email" placeholder="Votre mail" required>
-                        <input type="text" id="sujet" placeholder="Sujet" required>
-                        <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
-                        <button type="submit">Envoyer</button>
+                    <form (ngSubmit)="envoyerEmail()" #contactForm="ngForm">
+                      <input type="text" name="nom" [(ngModel)]="nom" placeholder="Votre nom" required>
+                      <input type="email" name="email" [(ngModel)]="email" placeholder="Votre email" required>
+                      <input type="text" name="sujet" [(ngModel)]="sujet" placeholder="Sujet" required>
+                      <textarea name="message" [(ngModel)]="message" rows="5" placeholder="Votre message" required></textarea>
+                      <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
                     </form>
-                    <p id="confirmation" style="color: green;"></p>
-                </section>
+                    <p *ngIf="confirmation" style="color: green;">{{ confirmation }}</p>
+                  </section>
+                  
 
             </div>
             <div class="containerPage ">

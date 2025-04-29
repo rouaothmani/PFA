@@ -1,0 +1,495 @@
+<section class="page-header">
+  <div class="page-header-bg" style="background-image: url(/img/11.png)" alt="">
+  </div>
+  <div class="container">
+    <div class="page-header__inner">
+      <h1>Votre Compte</h1>
+      <ul class="thm-breadcrumb list-unstyled" id="breadcrumbs">
+        <li><a href=""><i class="fa fa-home"></i> • </a></li>
+        <li><a href="/profile">Se Connecter </a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="profile-container">
+  <div class="sidebar">
+    <div class="user-info">
+      <div class="user-name">Bienvenue</div>
+    </div>
+    <ul class="menu">
+      <li><a href="/note">Mes Notes</a></li>
+      <li><a href="/demande">Demande Attestation de Présence</a></li>
+    </ul>
+  </div>
+
+  <div class="note-form">
+    <h1>MES NOTES</h1>
+
+    <div class="form-group" id="notes">
+      <label class="notes" for="semetd">Semestre</label>
+      <select 
+        style="background: rgba(28, 160, 222, 0.15); width: 100%; padding: 10px; border: none; font-size: 14px;"
+        class="form-control"
+        name="semetd"
+        id="semetd"
+        onchange="showSubjects()"  >
+    
+        <option value="">Selectionnez Semestre</option>
+        <option value="1">Semestre 1</option>
+        <option value="2">Semestre 2</option>
+      </select>
+<br>
+      <div id="semester1" class="matiere-list" style="display: none; margin-top: 10px;">
+        <h1>Semestre 1:</h1>
+        <ul>
+          <li>Probabilité et Statistique</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Théorie des languages et des automates</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Graphe et Optimisation</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Conception des système d'informatique</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Programmation Java</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Réseaux</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Base de Données</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Anglais 3</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Gestion d'entreprise</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>C#</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Developemment Web</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </ul>
+      </div>
+<br><br>
+      <div id="semester2" class="matiere-list" style="display: none; margin-top: 10px;">
+        <h1>Semestre 2:</h1>
+        <ul>
+          <li>Entrepot de données</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Base de données</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Technique d'indexation</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Technologie et Programmation Web</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Technique de compilation</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Test de logiciels(certification ISTQB)</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Intelligence Artificielle</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Droit</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Anglais 4</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Projet federe(Methode Agile)</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Data Mining</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <li>Programmation Java Avancée</li>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>DS1</th>
+                <th>DS2</th>
+                <th>DSTP1</th>
+                <th>EXAMEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </ul>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+

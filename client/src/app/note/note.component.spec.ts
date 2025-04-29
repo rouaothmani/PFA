@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Insc2Component } from './insc2.component';
+import { NoteComponent } from './note.component';
 
-describe('Insc2Component', () => {
-  let component: Insc2Component;
-  let fixture: ComponentFixture<Insc2Component>;
+describe('NoteComponent', () => {
+  let component: NoteComponent;
+  let fixture: ComponentFixture<NoteComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [Insc2Component]
+      declarations: [NoteComponent]
     });
-    fixture = TestBed.createComponent(Insc2Component);
+    fixture = TestBed.createComponent(NoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

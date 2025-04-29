@@ -129,7 +129,6 @@ ul.tick li strong {
         font-size: 14px; /* Réduit la taille du texte pour une meilleure lisibilité */
     }
 }
-
 /* General layout */
 .profile-container {
     display: flex;
@@ -188,138 +187,49 @@ ul.tick li strong {
     background-color: #59c3df; /* Different green on hover */
   }
   
-  /* Main content area */
-  .main-content {
-    flex-grow: 1;
-    padding: 30px; /* Increased padding */
-  }
-  
-  /* News section */
-  .news-section {
-    margin-top: 20px;
-  }
-  
-  .news-heading {
-    color: #005870;
-    font-size: 1.8em;
-    margin-bottom: 20px; /* Increased spacing */
-  }
-  
-  /* News boxes */
-  .news-container {
-    margin-top: 20px;
-  }
-  
-  .news-box {
-    border: 1px solid #005870;
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px;
-    margin-bottom: 20px; /* Increased spacing */
-    background-color: #fff; /* White news boxes */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-  
-  .news-box:nth-child(odd) {
-    background-color: #f8f8f8; /* Light gray for every other */
-  }
-  
-  .news-box .news-date {
-    background-color: #005870;
-    color: #fff;
-    padding: 10px; /* Increased padding */
-    text-align: center;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .news-box .news-date .day {
-    font-size: 1.5em; /* Larger day */
-    font-weight: bold;
-    display: block;
-  }
-  
-  .news-box .news-date .month {
-    font-size: 0.9em;
-    display: block;
-  }
-  .news-box .news-details {
-      display: flex;
-      flex-direction: row;
-  }
-  .news-box .news-details .news-time {
-      margin: 0 10px;
-  }
-  
-  .news-box .news-details .news-title {
-      flex-grow: 1;
-  }
-  
-  .news-box h4 {
-    margin-top: 0;
-    color: #005870;
-    font-size: 1.2em; /* Slightly bigger titles */
-  }
-  
-  .news-box .more-details {
-    color: #005870;
-    text-decoration: none;
-    font-weight: bold; /* Make "More Details" bold */
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .news-box .more-details:hover {
-    text-decoration: underline;
-  }
-  
-  .news-link .new-tag {
-      background-color: red;
-      color: white;
-      padding: 0px 5px;
-      border-radius: 5px;
-      margin-left: 5px;
-      font-size: small;
-  }
-  .account-settings {
-    max-width: 900px;
+.attestation-form {
+    max-width: 700px;
     margin: auto;
     text-align: center;
+    margin-top: 10%;
   }
-  .account-settings h1 {
-    font-size: 28px;
+  .attestation-form h1 {
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
+    color: #333;
   }
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: auto;
-    background: url('/assets/img/profile.png') no-repeat center/cover;
-  }
-  .form-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 0;
-  }
-  .form-group {
-    flex: 1;
-    min-width: 250px;
+  .language-selection {
     text-align: left;
+    margin-bottom: 30px;
+    padding: 5px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
   }
-  .form-group label {
-    font-weight: bold;
-    display: block;
+  .language-selection p {
+    font-style: italic;
     margin-bottom: 5px;
+    color: #555;
   }
-  .form-group input {
+  .language-option {
+    margin-bottom: 20px;
+  }
+  .language-option label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .language-option input {
     width: 100%;
     padding: 10px;
-    border: none;
-    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .language-option .note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
   }
   .btn-submit {
     background-color: #59c3df;
@@ -330,4 +240,9 @@ ul.tick li strong {
     cursor: pointer;
     border-radius: 6px;
     margin-top: 20px;
+  }
+  .separator {
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0;
   }
