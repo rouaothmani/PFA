@@ -1,0 +1,43 @@
+<div class="profile-container">
+    <div class="sidebar">
+      <div class="user-info">
+        <div class="user-name">Bienvenue</div>
+        <div class="welcome-message">Bienvenue {{user?.name}}</div>
+      </div>  
+      <ul class="menu">
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Paramètres Compte</a></li>
+        <li><a href="#">Mes Notes</a></li>
+        <li><a href="#">Demande Attestation de Présence</a></li>
+        <li><a href="#">Archive des DS et EXAMENS</a></li>
+        <li class="logout"><a href="#">Déconnexion</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="news-section">
+        <h2 class="news-heading">ACTUALITÉ POUR ETUDIANTS</h2>
+        <div class="news-list" *ngFor="let new of news">
+          <div class="news-box">
+            <div class="news-date">
+              <span class="day">{{new.date}}</span>
+              <span class="month">{{new.month}}</span>
+            </div>
+            <div class="news-details">
+              <div class="news-time">{{new.time}}</div>
+              <div class="news-title">{{new.title}}</div>
+              <a href="#" class="news-link">Plus de Détails <span class="new-tag" *ngIf="new.isNew">NEW</span></a>
+            </div>           
+            <div class="news-date">
+              <span class="day">23</span>
+              <span class="month">août</span>
+            </div>
+            <div class="news-details">
+              <div class="news-time">11:02</div>
+              <div class="news-title">Page De Garde PFE MPILC A.U 2024-2025</div>
+              <a href="#" class="news-link">Plus de Détails <span class="new-tag">NEW</span></a>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>

@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './src/app.module';
 import * as bcrypt from 'bcrypt';
-import { UserService } from './src/auth/user.service';
+import { UserService } from 'src/user/user.service';
 
 async function bootstrap() {
   const app = await NestFactory.createApplicationContext(AppModule);
@@ -13,19 +13,19 @@ async function bootstrap() {
   const passwordUser2 = await bcrypt.hash('test', saltRounds);
 
   const userAdmin = {
-    cin: '123456789',
+    cin: 12345678,
     password: passwordAdmin,
-    role: 'admin',
+
   };
 
   const user1 = {
-    cin: '987654321',
+    cin: 98765432,
     password: passwordUser1,
-    role: 'user',
+
   };
 
   const user2 = {
-    cin: '111111111',
+    cin: 11111111,
     password: passwordUser2,
     role: 'user',
   };

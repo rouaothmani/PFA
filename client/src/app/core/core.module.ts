@@ -52,7 +52,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     CoreRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
+  ],
+  providers: [
   ],
   exports:[
     ProposComponent,

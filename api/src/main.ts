@@ -11,7 +11,7 @@ async function bootstrap() {
     .setTitle('ISIM API')
     .setDescription('The ISIM API description')
     .setVersion('1.0')
-    .addTag('isim')
+    .addTag('ISIM')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
