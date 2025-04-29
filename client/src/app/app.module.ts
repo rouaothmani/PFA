@@ -14,12 +14,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ProfileComponent,
   
   ],
   imports: [
