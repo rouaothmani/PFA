@@ -33,7 +33,6 @@ import { ProfileComponent } from './profile/profile.component';
     NgxPaginationModule,
     CarouselModule,
     CoreModule,
-    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
