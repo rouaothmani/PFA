@@ -1,27 +1,23 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
-
 export class HeaderComponent {
-  cin: number =12456778;
+  cin: number = 12456778;
   password!: string;
 
-  constructor(private headerService: HeaderService) {}
+  constructor(private headerService: HeaderService, private toastrService: ToastrService) {}
 
-  private _showToast(message: string, isSuccess: boolean) {
-    const toastLiveExample = document.getElementById('myToast') as HTMLElement;
-    const toastBody = document.querySelector('#myToast .toast-body') as HTMLElement;
-    if (toastLiveExample && toastBody) {
-      toastBody.textContent = message;
-      toastLiveExample.classList.remove(isSuccess ? 'bg-danger' : 'bg-success');
-      toastLiveExample.classList.add(isSuccess ? 'bg-success' : 'bg-danger');
-      const toast = new (window as any).bootstrap.Toast(toastLiveExample);
-      toast.show();
+  showToast(message: string, type: 'success' | 'danger') {
+    if (type === 'success') {
+      this.toastrService.success(message);
+    } else {
+      this.toastrService.error(message);
     }
   }
 
