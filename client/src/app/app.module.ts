@@ -37,7 +37,6 @@ import { DemandeComponent } from './demande/demande.component';
     NgxPaginationModule,
     CarouselModule,
     CoreModule,
-    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
