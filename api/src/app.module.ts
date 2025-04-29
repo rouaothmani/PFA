@@ -11,7 +11,7 @@ import { UserModule } from './user/user.module';
         host: 'localhost',
         port: 5432,
         username: 'postgres',
-        password: 'postgres',
+        password: 'postgresql',
         database: 'agil',
         autoLoadEntities: true,
         synchronize: true,
